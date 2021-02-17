@@ -1,0 +1,22 @@
+@import 'styles/colors';
+
+.logo {
+  font-size: 3rem;
+  line-height: 1em;
+  font-weight: 900;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  small {
+    font-size: 0.3em;
+    line-height: 1em;
+  }
+
+  &.primary {
+    color: $primary;
+  }
+}

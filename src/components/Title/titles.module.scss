@@ -1,0 +1,16 @@
+@import 'styles/colors';
+
+.title {
+  font-size: 'Lato', sans-serif;
+  font-weight: 900;
+
+  &.primary {
+    color: $primary;
+  }
+}
+
+h1.title {
+  font-size: 3rem;
+  line-height: 1.2em;
+  text-transform: uppercase;
+}
