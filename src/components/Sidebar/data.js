@@ -1,3 +1,4 @@
+import React from 'react';
 import * as Icon from "phosphor-react";
 
 const NavData = [

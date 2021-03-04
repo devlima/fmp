@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from 'next/head';
 import Slider from "react-slick";
 import styles from 'styles/app.module.scss';

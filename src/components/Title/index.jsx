@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './titles.module.scss';
 
 const Title = ({ size, color, subtitle, children }) => {

@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './subtitles.module.scss';
 
 const Subtitle = ({ size, color, children }) => {
