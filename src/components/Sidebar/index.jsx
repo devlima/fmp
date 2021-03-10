@@ -14,7 +14,7 @@ export default function Sidebar() {
     return (
       <span className={styles.iconBadge}>
         {icon}
-        <span className={styles.badgeDesc}>{desc}</span>
+        <span aria-hidden="true" className={styles.badgeDesc}>{desc}</span>
       </span>
     )
   }
@@ -26,7 +26,7 @@ export default function Sidebar() {
 
   return (
     <aside className={`${styles.container} ${expanded ? styles.expanded : ''}`}>
-      <button type="button" className={styles.toggle} onClick={handleToggle}>
+      <button type="button" className={styles.toggle} onClick={handleToggle} aria-label="Toggle sidebar state">
         <Icon.IconContext.Provider value={{size: 12, weight: "bold", color: Color.DarkGrey, style: { minWidth: 12 }}}>
           {expanded ? <Icon.CaretLeft /> : <Icon.CaretRight />}
         </Icon.IconContext.Provider>
@@ -40,7 +40,7 @@ export default function Sidebar() {
                 return (
                   <li key={item.name}>
                     <Link href={'/' + item.dest} passHref>
-                      <a className={styles.link} tabIndex="0">
+                      <a className={styles.link} tabIndex="0" aria-label={`link to ${item.dest}`}>
                         <span className={styles.icon}>
                           {NavIcon}
                         </span>
