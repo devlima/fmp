@@ -5,7 +5,7 @@ const NavData = [
   {
     "name": 'Home',
     "icon": <Icon.House />,
-    "dest": '',
+    "dest": 'home',
     "hasIconBadge": false,
   },
   {

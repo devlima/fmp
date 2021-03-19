@@ -4,7 +4,7 @@ import styles from './Loading.module.scss';
 const Loading = () => {
     return (
         <div className={styles.loading}>
-            <p>Carregando...</p>
+            <p className={styles.text}>Loading</p>
         </div>
     )
 };

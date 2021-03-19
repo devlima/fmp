@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import * as Icon from "phosphor-react";
 import { useState } from 'react';
 import NavData from './data';
@@ -9,6 +10,7 @@ import * as Color from 'styles/colors.module.scss';
 export default function Sidebar() {
 
   const [expanded, setExpanded] = useState(false);
+  const router = useRouter();
 
   const iconBadge = (icon, desc) => {
     return (
@@ -17,12 +19,11 @@ export default function Sidebar() {
         <span aria-hidden="true" className={styles.badgeDesc}>{desc}</span>
       </span>
     )
-  }
-
+  };
   
   const handleToggle = () => {
     setExpanded(!expanded);
-  }
+  };
 
   return (
     <aside className={`${styles.container} ${expanded ? styles.expanded : ''}`}>
@@ -37,10 +38,12 @@ export default function Sidebar() {
             {
               NavData.map(item => {
                 const NavIcon = item.hasIconBadge ? iconBadge(item.icon, item.badgeDesc) : item.icon;
+                const path = '/' + item.dest;
+                const isActive = router.pathname === path;
                 return (
                   <li key={item.name}>
-                    <Link href={'/' + item.dest} passHref>
-                      <a className={styles.link} tabIndex="0" aria-label={`link to ${item.dest}`}>
+                    <Link href={path} passHref>
+                      <a className={`${styles.link} ${isActive ? styles.linkActive : ''}`} tabIndex="0" aria-label={`link to ${item.dest}`}>
                         <span className={styles.icon}>
                           {NavIcon}
                         </span>
@@ -54,7 +57,9 @@ export default function Sidebar() {
           </ul>
         </Icon.IconContext.Provider>
       </nav>
-      <div className={styles.prefil}></div>
+      <Link href="/profile">
+        <a className={styles.prefil} aria-label="link to profile" tabIndex="0"></a>
+      </Link>
     </aside>
   )
 }

@@ -2,9 +2,12 @@
 
 .main {
   display: flex;
-  width: 100vw;
+  flex-direction: column;
+  width: 100%;
   min-height: 100vh;
   background-color: $grey;
+
+  @media(min-width: 768px){ flex-direction: row; }
 }
 
 .container {
