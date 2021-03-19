@@ -1,17 +1,1 @@
 @import 'styles/colors';
-
-.main {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: 100vh;
-  background-color: $grey;
-
-  @media(min-width: 768px){ flex-direction: row; }
-}
-
-.container {
-  padding: 1.5rem 2.5rem;
-  flex: 1;
-  min-height: 100%;
-}

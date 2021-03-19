@@ -15,6 +15,25 @@ a {
 
 * {
   box-sizing: border-box;
+  min-width: 0;
+  min-height: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-color: $grey;
+
+  @media(min-width: 768px){ flex-direction: row; }
+}
+
+.container {
+  position: relative;
+  padding: 1.5rem 2.5rem;
+  flex: 1;
+  min-height: 100%;
 }
 
 .c-primary { color: $primary !important; }

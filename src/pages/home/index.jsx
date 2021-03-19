@@ -1,32 +1,25 @@
 import React from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import styles from 'styles/app.module.scss';
+import Sidebar from 'components/Sidebar';
 
 export default function App() {
-
-
-  const Sidebar = dynamic(() => import('components/Sidebar'));
   const Header = dynamic(() => import('components/Header'));
-
-  const settings = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    variableWidth: true,
-    slidesToScroll: 1
-  };
+  const FavSlider = dynamic(() => import('components/FavSlider'));
 
   return (
     <>
       <Head>
         <title>FMPlanner</title>
+        <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" /> 
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
       </Head>
 
-      <main className={styles.main}>
+      <main className="main">
         <Sidebar />
-        <div className={styles.container}>
+        <div className="container">
             <Header />
+            <FavSlider />
         </div>
       </main>
     </>
