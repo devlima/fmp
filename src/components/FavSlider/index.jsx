@@ -6,12 +6,27 @@ import * as Icon from "phosphor-react";
 import * as Color from 'styles/colors.module.scss';
 
 const FavSlider = () => {
+
+  function FavArrows(props) {
+    const { className, style, onClick, dir } = props;
+    return (
+        <div className={`${className}`} style={{ ...style }} onClick={onClick}>
+          <Icon.IconContext.Provider value={{size: 35, weight: "regular", color: 'white', style: { minWidth: 12 }}}>
+            {dir === 'next' ? <Icon.ArrowRight /> : <Icon.ArrowLeft />}
+          </Icon.IconContext.Provider>
+        </div>
+    );
+  }
+
+
   const settings = {
     dots: false,
     infinite: false,
     speed: 500,
     slidesToScroll: 1,
     slidesToShow: 6,
+    nextArrow: <FavArrows dir="next" />,
+    prevArrow: <FavArrows dir="prev" />,
     responsive: [
       {
         breakpoint: 767,

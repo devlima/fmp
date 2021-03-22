@@ -15,8 +15,6 @@ a {
 
 * {
   box-sizing: border-box;
-  min-width: 0;
-  min-height: 0;
 }
 
 .main {
@@ -34,6 +32,7 @@ a {
   padding: 1.5rem 2.5rem;
   flex: 1;
   min-height: 100%;
+  overflow: hidden;
 }
 
 .c-primary { color: $primary !important; }

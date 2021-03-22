@@ -1,12 +1,48 @@
 @import 'styles/colors.scss';
 
 .favSlider {
+  padding-top: calc(40px - 1rem);
   max-width: 100%;
   flex: 1;
+
+  :global {
+    .slick-list { overflow: visible; }
+
+    .slick-slide{
+      > div {
+        padding: 1rem 0;
+      }
+
+      &:not(:first-of-type){
+        padding-left: 1rem;
+      }
+    }
+
+    .slick-arrow {
+      width: 35px;
+      height: 35px;
+      transform: none;
+      transition: opacity 0.6s ease;
+      
+      &::before { display: none; }
+
+      &.slick-disabled { opacity: 0.4; }
+    }
+
+    .slick-next {
+      top: 0;
+      right: 0;
+    }
+
+    .slick-prev {
+      top: 0;
+      right: calc(35px + 8px);
+      left: initial;
+    }
+  }
 }
 
 .card {
-  margin: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,10 +56,6 @@
   border-radius: 12px;
   box-shadow: 0px 3px 6px 0px rgba(black, 0.16);
   transition: transform 0.4s ease;
-
-  @media(min-width: 992px){
-    margin: 1rem 2rem 1rem 1rem;
-  }
 
   &:hover {
     transform: translateY(5px);
