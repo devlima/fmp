@@ -1,1 +1,1 @@
-export const Primary = '#D2FF00';
+export const primary = '#D2FF00';

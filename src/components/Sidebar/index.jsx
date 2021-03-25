@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import * as Icon from "phosphor-react";
@@ -28,12 +28,12 @@ export default function Sidebar() {
   return (
     <aside className={`${styles.container} ${expanded ? styles.expanded : ''}`}>
       <button type="button" className={styles.toggle} onClick={handleToggle} aria-label="Toggle sidebar state">
-        <Icon.IconContext.Provider value={{size: 12, weight: "bold", color: Color.DarkGrey, style: { minWidth: 12 }}}>
+        <Icon.IconContext.Provider value={{size: 12, weight: "bold", color: Color.darkgrey, style: { minWidth: 12 }}}>
           {expanded ? <Icon.CaretLeft /> : <Icon.CaretRight />}
         </Icon.IconContext.Provider>
       </button>
       <nav className={styles.nav}>
-        <Icon.IconContext.Provider value={{ size: 32, weight: "bold", color: Color.Primary}}>
+        <Icon.IconContext.Provider value={{ size: 32, weight: "bold", color: Color.primary}}>
           <ul>
             {
               NavData.map(item => {

@@ -56,7 +56,7 @@ const FavSlider = () => {
   };
   
   return (
-    <Icon.IconContext.Provider value={{size: 28, weight: "bold", color: Color.DarkGrey, style: { minWidth: 12 }}}>
+    <Icon.IconContext.Provider value={{size: 28, weight: "bold", color: Color.darkgrey, style: { minWidth: 12 }}}>
       <Slider {...settings} className={styles.favSlider}>
         <Link href="/">
           <a className={styles.card}>
