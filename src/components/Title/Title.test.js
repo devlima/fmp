@@ -13,13 +13,13 @@ it("renders correclty", () => {
 
 it("should have margin 0 when next item is subtitle", () => {
   const { getByText } = render(<Title subtitle>teste</Title>);
-  expect(getByText('teste')).toHaveStyle('margin-bottom', 0);
+  expect(getByText('teste')).toHaveStyle('margin-bottom: 0');
 })
 
 sizes.map(size => {
   it(`should have size ${size}`, () => {
     const { getByText } = render(<Title size={size}>teste</Title>);
-    expect(getByText('teste')).toHaveClass(size);
+    expect(getByText('teste').tagName.toLowerCase()).toBe(size);
   })
 })
 
