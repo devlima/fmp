@@ -20,6 +20,8 @@
 	text-transform: uppercase;
 	user-select: none;
 	pointer-events:none;
+	-webkit-text-stroke: 1px $primary;
+	color: transparent;
 	@media(min-width:992px){ font-size: 4rem; }
 
 	&::before,
@@ -29,7 +31,6 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		-webkit-text-stroke: 1px $primary;
 		color: transparent;
 		z-index: 2;
 		@media(min-width:992px){ -webkit-text-stroke-width: 2px; }
@@ -38,10 +39,12 @@
 	&::before {
 		opacity: 0.8;
 		animation: left-right 5s ease infinite;
+		-webkit-text-stroke: 1px $primary;
 	}
 
 	&::after {
 		animation: right-left 5s ease infinite;
+		color: $primary;
 	}
 }
 
@@ -53,12 +56,12 @@
 
 	30%,
 	40% {
-		transform: translate(25%, 50%);
+		transform: translate(10%, 20%);
 	}
 
 	60%,
 	70% {
-		transform: translate(-25%, 50%);
+		transform: translate(-10%, 20%);
 	}
 }
 
@@ -70,11 +73,11 @@
 
 	30%,
 	40% {
-		transform: translate(-25%, -50%);
+		transform: translate(-10%, -20%);
 	}
 
 	60%,
 	70% {
-		transform: translate(25%, -50%);
+		transform: translate(10%, -20%);
 	}
 }

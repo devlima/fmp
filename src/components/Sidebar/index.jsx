@@ -36,12 +36,12 @@ export default function Sidebar() {
         <Icon.IconContext.Provider value={{ size: 32, weight: "bold", color: Color.primary}}>
           <ul>
             {
-              NavData.map(item => {
+              NavData.map((item, index) => {
                 const NavIcon = item.hasIconBadge ? iconBadge(item.icon, item.badgeDesc) : item.icon;
                 const path = '/' + item.dest;
                 const isActive = router.pathname === path;
                 return (
-                  <li key={item.name}>
+                  <li key={item.name + index}>
                     <Link href={path} passHref>
                       <a className={`${styles.link} ${isActive ? styles.linkActive : ''}`} tabIndex="0" aria-label={`link to ${item.dest}`}>
                         <span className={styles.icon}>

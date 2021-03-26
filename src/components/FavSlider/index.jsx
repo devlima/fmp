@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './favslider.module.scss';
 import Slider from "react-slick";
 import Link from 'next/link';
+import FavData from './data';
 import * as Icon from "phosphor-react";
 import * as Color from 'styles/colors.module.scss';
 
@@ -58,140 +59,16 @@ const FavSlider = () => {
   return (
     <Icon.IconContext.Provider value={{size: 28, weight: "bold", color: Color.darkgrey, style: { minWidth: 12 }}}>
       <Slider {...settings} className={styles.favSlider}>
-        <Link href="/">
-          <a className={styles.card}>
-            wage cap
-            <span className={styles.sufix}>
-              <Icon.CurrencyDollarSimple />
-            </span>
-          </a>
-        </Link>
-
-        <Link href="/">
-          <a className={styles.card}>
-            wage cap
-            <span className={styles.sufix}>
-              <Icon.CurrencyDollarSimple />
-            </span>
-          </a>
-        </Link>
-
-        <Link href="/">
-          <a className={styles.card}>
-            wage cap
-            <span className={styles.sufix}>
-              <Icon.CurrencyDollarSimple />
-            </span>
-          </a>
-        </Link>
-
-        <Link href="/">
-          <a className={styles.card}>
-            wage cap
-            <span className={styles.sufix}>
-              <Icon.CurrencyDollarSimple />
-            </span>
-          </a>
-        </Link>
-
-        <Link href="/">
-          <a className={styles.card}>
-            wage cap
-            <span className={styles.sufix}>
-              <Icon.CurrencyDollarSimple />
-            </span>
-          </a>
-        </Link>
-
-        <Link href="/">
-          <a className={styles.card}>
-            wage cap
-            <span className={styles.sufix}>
-              <Icon.CurrencyDollarSimple />
-            </span>
-          </a>
-        </Link>
-
-        <Link href="/">
-          <a className={styles.card}>
-            wage cap
-            <span className={styles.sufix}>
-              <Icon.CurrencyDollarSimple />
-            </span>
-          </a>
-        </Link>
-
-        <Link href="/">
-          <a className={styles.card}>
-            wage cap
-            <span className={styles.sufix}>
-              <Icon.CurrencyDollarSimple />
-            </span>
-          </a>
-        </Link>
-
-        <Link href="/">
-          <a className={styles.card}>
-            wage cap
-            <span className={styles.sufix}>
-              <Icon.CurrencyDollarSimple />
-            </span>
-          </a>
-        </Link>
-
-        <Link href="/">
-          <a className={styles.card}>
-            wage cap
-            <span className={styles.sufix}>
-              <Icon.CurrencyDollarSimple />
-            </span>
-          </a>
-        </Link>
-
-        <Link href="/">
-          <a className={styles.card}>
-            wage cap
-            <span className={styles.sufix}>
-              <Icon.CurrencyDollarSimple />
-            </span>
-          </a>
-        </Link>
-
-        <Link href="/">
-          <a className={styles.card}>
-            wage cap
-            <span className={styles.sufix}>
-              <Icon.CurrencyDollarSimple />
-            </span>
-          </a>
-        </Link>
-
-        <Link href="/">
-          <a className={styles.card}>
-            wage cap
-            <span className={styles.sufix}>
-              <Icon.CurrencyDollarSimple />
-            </span>
-          </a>
-        </Link>
-
-        <Link href="/">
-          <a className={styles.card}>
-            wage cap
-            <span className={styles.sufix}>
-              <Icon.CurrencyDollarSimple />
-            </span>
-          </a>
-        </Link>
-
-        <Link href="/">
-          <a className={styles.card}>
-            wage cap
-            <span className={styles.sufix}>
-              <Icon.CurrencyDollarSimple />
-            </span>
-          </a>
-        </Link>
+        {FavData.map((item, index) => (
+          <Link href={item.dest} key={item.name + index}>
+            <a className={styles.card}>
+              {item.name}
+              <span className={styles.sufix}>
+                {item.icon}
+              </span>
+            </a>
+          </Link>
+        ))}
       </Slider>
     </Icon.IconContext.Provider>
   )
