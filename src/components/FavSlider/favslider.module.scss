@@ -3,7 +3,6 @@
 .favSlider {
   padding-top: calc(40px - 1rem);
   max-width: 100%;
-  flex: 1;
 
   :global {
     .slick-list { overflow: visible; }

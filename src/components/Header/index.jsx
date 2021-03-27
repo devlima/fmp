@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div>
-        <Title color="primary" size="h1" subtitle>man utd fc</Title>
+        <Title color="primary" size="h1" noMargin>man utd fc</Title>
         <Subtitle color="white" size="h1">SEASON 2020/2021</Subtitle>
       </div>
       <Logo />

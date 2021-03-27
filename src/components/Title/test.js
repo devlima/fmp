@@ -11,9 +11,14 @@ it("renders correclty", () => {
   expect(getByText('teste')).toBeTruthy();
 })
 
-it("should have margin 0 when next item is subtitle", () => {
-  const { getByText } = render(<Title subtitle>teste</Title>);
+it("should have margin 0 when prop noMargin", () => {
+  const { getByText } = render(<Title noMargin>teste</Title>);
   expect(getByText('teste')).toHaveStyle('margin-bottom: 0');
+})
+
+it("should have text-center when prop center", () => {
+  const { getByText } = render(<Title center>teste</Title>);
+  expect(getByText('teste')).toHaveStyle('text-align: center');
 })
 
 sizes.map(size => {
