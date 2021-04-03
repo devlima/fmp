@@ -4,14 +4,23 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1.5rem 1.75rem;
+  padding: 1.5rem 0 0;
   background-color: $lightgrey;
   border-radius: 12px;
   box-shadow: 0 3px 6px 0px rgba(0,0,0,0.16);
   flex: 1;
+  max-height: 50vh;
+  overflow: hidden;
 
   @media(min-width: 768px){ max-width: 240px; }
   @media(min-width: 992px){ max-width: 310px; }
 
   &.full { max-width: inherit; }
+  
+  & > div {
+    width: calc(100% + 4px) !important;
+    height: 350px !important;
+    margin-left: -2px;
+    margin-bottom: -2px;
+  }
 }

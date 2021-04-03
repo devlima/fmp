@@ -4,11 +4,13 @@ import dynamic from 'next/dynamic';
 import Sidebar from 'components/Sidebar';
 import Cards from 'components/Cards';
 import Card from 'components/Card';
+import GraphicData from 'fakedata/graphic';
 
 export default function App() {
   const Header = dynamic(() => import('components/Header'));
   const FavSlider = dynamic(() => import('components/FavSlider'));
   const WageCap = dynamic(() => import('components/WageCap'));
+  const Graphic = dynamic(() => import('components/Graphic'));
 
   return (
     <>
@@ -27,8 +29,8 @@ export default function App() {
               <Card title="wage cap/m">
                 <WageCap />
               </Card>
-              <Card title="Season spends overall" full>
-
+              <Card title="Season spends overall" link="/" full>
+                <Graphic data={GraphicData} team="mufc" />
               </Card>
             </Cards>
         </div>
