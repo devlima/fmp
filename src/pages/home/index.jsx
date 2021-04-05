@@ -7,10 +7,10 @@ import Card from 'components/Card';
 import GraphicData from 'fakedata/graphic';
 
 export default function App() {
-  const Header = dynamic(() => import('components/Header'));
-  const FavSlider = dynamic(() => import('components/FavSlider'));
-  const WageCap = dynamic(() => import('components/WageCap'));
-  const Graphic = dynamic(() => import('components/Graphic'));
+  const Header = dynamic(() => import('components/Header'), { loading: () => <p>...</p> });
+  const FavSlider = dynamic(() => import('components/FavSlider'), { loading: () => <p>...</p> });
+  const WageCap = dynamic(() => import('components/WageCap'), { loading: () => <p>...</p> });
+  const Graphic = dynamic(() => import('components/Graphic'), { loading: () => <p>...</p> });
 
   return (
     <>
