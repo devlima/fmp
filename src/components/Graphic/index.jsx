@@ -3,7 +3,7 @@ import { ResponsiveStream } from '@nivo/stream';
 import { linearGradientDef } from '@nivo/core'
 import * as Color from 'styles/colors.module.scss';
 
-const Graphic = ({ data, team }) => (
+const Graphic = ({ data, team}) => (
         <ResponsiveStream
             data={data}
             keys={[team]}
@@ -17,8 +17,8 @@ const Graphic = ({ data, team }) => (
             borderColor={Color.primary}
             defs={[
                 linearGradientDef('gradientA', [
-                    { offset: 0, color: Color.primary },
-                    { offset: 100, color: Color.primary, opacity: 0.5 },
+                    { offset: 0, color: Color.primary, opacity: 0.20 },
+                    { offset: 100, color: Color.primary, opacity: 0.10 },
                 ]),
             ]}
             fill={[

@@ -6,19 +6,19 @@ const GraphicData = [
     "mufc": 40
   },
   {
+    "mufc": 55
+  },
+  {
     "mufc": 60
   },
   {
-    "mufc": 80
+    "mufc": 70
   },
   {
-    "mufc": 100
+    "mufc": 65
   },
   {
-    "mufc": 115
-  },
-  {
-    "mufc": 130
+    "mufc": 55
   },
 ];
 
