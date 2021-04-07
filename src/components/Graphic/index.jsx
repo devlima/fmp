@@ -4,6 +4,7 @@ import { linearGradientDef } from '@nivo/core'
 import * as Color from 'styles/colors.module.scss';
 
 const Graphic = ({ data, team}) => (
+    <div style={{position: 'absolute', bottom: '-1%', left: '-1%', width: '102%', height: '102%'}}>
         <ResponsiveStream
             data={data}
             keys={[team]}
@@ -26,6 +27,7 @@ const Graphic = ({ data, team}) => (
             ]}
             isInteractive={false}
         />
+    </div>
 )
 
 export default Graphic;

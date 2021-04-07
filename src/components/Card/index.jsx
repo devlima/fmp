@@ -6,7 +6,9 @@ const Card = ({ title, full, children }) => {
   return (
     <article className={`${styles.container} ${full ? styles.full : ''}`}>
       <Title size="h3" color="white" center noMargin>{title}</Title>
-      {children}
+      <div className={styles.content}>
+        {children}
+      </div>
     </article>
   )
 };
