@@ -5,12 +5,13 @@ import Sidebar from 'components/Sidebar';
 import Cards from 'components/Cards';
 import Card from 'components/Card';
 import GraphicData from 'fakedata/graphic';
+import Loading from 'components/Loading';
 
 export default function App() {
-  const Header = dynamic(() => import('components/Header'), { loading: () => <p>...</p> });
-  const FavSlider = dynamic(() => import('components/FavSlider'), { loading: () => <p>...</p> });
-  const WageCap = dynamic(() => import('components/WageCap'), { loading: () => <p>...</p> });
-  const Graphic = dynamic(() => import('components/Graphic'), { loading: () => <p>...</p> });
+  const Header = dynamic(() => import('components/Header'), { loading: () => <Loading fixed /> });
+  const FavSlider = dynamic(() => import('components/FavSlider'), { loading: () => <Loading fixed /> });
+  const WageCap = dynamic(() => import('components/WageCap'), { loading: () => <Loading fixed /> });
+  const Graphic = dynamic(() => import('components/Graphic'), { loading: () => <Loading fixed /> });
 
   return (
     <>
